@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'path/to/your/styles.css' %}">
+    <title>¿Quiénes somos?</title>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h2>¿Quiénes somos?</h2>
+        
+        
+        <div id="contenido" class="mt-3">
+            <p>
+                En French, nos apasiona ofrecerte una experiencia culinaria única. Nuestro equipo está compuesto por chefs expertos que utilizan ingredientes frescos y de alta calidad para crear platos deliciosos que deleitarán tu paladar. Desde nuestras carnes a la parrilla hasta nuestros postres caseros, cada bocado está diseñado para brindarte una experiencia memorable.
+            </p>
+            
+            <p>
+                Nuestra misión es proporcionar un ambiente acogedor donde cada cliente se sienta como en casa. Creemos que la comida es una forma de arte y nos esforzamos por presentar cada plato de manera estética y deliciosa. Cada día, nos comprometemos a superar tus expectativas y a ofrecerte un servicio excepcional.
+            </p>
+            
+            <p>
+                En French, valoramos la sostenibilidad y trabajamos estrechamente con proveedores locales para garantizar que nuestros ingredientes sean frescos y de temporada. Nos enorgullece apoyar a la comunidad y contribuir a un futuro más sostenible.
+            </p>
+            
+            <p>
+                Nuestra visión es convertirnos en el restaurante de referencia en la ciudad, donde la calidad, el sabor y la atención al cliente se fusionen para crear experiencias inolvidables. Cada visita es una oportunidad para descubrir nuevos sabores y disfrutar de momentos especiales con amigos y familiares.
+            </p>
+            
+            <p>
+                ¡Te invitamos a visitarnos y disfrutar de lo mejor de la gastronomía! Ven y descubre por qué somos el lugar favorito de tantos amantes de la buena comida. ¡Te esperamos con los brazos abiertos!
+            </p>
+
+            <!-- Imagen al final del texto -->
+            <img src="{% static 'App/imagenes/Quienes.jpeg' %}" alt="Imagen del restaurante" class="img-fluid mx-auto d-block" style="max-width: 80%;">
+        </div>
+    </div>

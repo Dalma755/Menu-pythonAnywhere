@@ -1,0 +1,42 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Guarnicion
+{% endblock title %}
+
+{% block codigoDinamico %}
+
+<div class="container">
+    <br> <br> <br>
+    <form action="" method"get">
+        
+        <input type="text" name="nombre" id="nombre" placeholder="buscar guarnición">
+        <br> <br> <br>
+        <input type="submit" value="Buscar Guarnición" class="btn btn-outline-light">
+    
+    </form>
+    <br> <br> <br>
+    {% if guarnicion %}
+
+        {% for guarnicion in guarnicion %}
+        <table class="table table-hover text-center">
+            <tbody>
+                <th scope="col">Nombre</th>
+                <th scope="col">ID</th>
+                <th scope="col">Precio</th>
+                <tr class="table-secondary text-center">
+                    <th>{{ guarnicion.nombre }}</th>
+                    <td>{{ guarnicion.id }}</td>
+                    <td>{{ guarnicion.precio }}</td>
+            </tbody>
+        </table>
+        {% endfor %}
+
+    {% else %}
+        <h3>No hay resultados para la búsqueda.</h3>
+    {% endif %}
+</div>
+
+{% endblock %}

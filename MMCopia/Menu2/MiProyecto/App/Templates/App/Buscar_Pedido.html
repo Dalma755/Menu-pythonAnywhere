@@ -1,0 +1,65 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Pedido
+{% endblock title %}
+
+{% block codigoDinamico %}
+
+<div class="container">
+<br> <br> <br>
+    <form action="" method="get">
+        
+    <input type="text" name="id" id="id"  placeholder="buscar pedido">
+    <br> <br> <br>
+    <input type="submit" value="Buscar Pedido" class="btn btn-outline-light">
+
+    </form>
+    <br> <br> <br>
+    {% if pedido %}
+
+        {% for pedido in pedido %}
+        <table class="table table-hover text-center">
+            <tbody>
+                    <th scope="col">ID</th>
+                    <th scope="col">Mesa</th>
+                    <th scope="col">Plato Principal</th>
+                    <th scope="col">Adicional Plato</th>
+                    <th scope="col">Bebida</th>
+                    <th scope="col">Adicional Bebida</th>
+                    <th scope="col">Guarnición</th>
+                    <th scope="col">Adicional Guarnición</th>
+                    <th scope="col">Postre<th>
+                    <th scope="col">Adicional Postre</th>
+                    <th scope="col">Café/Té</th>
+                    <th scope="col">Adicional Café/Té</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Estado</th>
+                    <tr class="table-secondary text-center">
+                    <th>{{ pedido.id }}</th>
+                    <td>{{ pedido.mesa.id }}</td>
+                    <td>{{ pedido.plato_principal.nombre }}</td>
+                    <td>{{ pedido.plato_principal.adicional }}</td>
+                    <td>{{ pedido.bebida.nombre }}</td>
+                    <td>{{ pedido.bebida.adicional }}</td>
+                    <td>{{ pedido.guarnicion.nombre }}</td>
+                    <td>{{ pedido.guarnicion.adicional }}</td>
+                    <td>{{ pedido.postre.nombre }}</td>
+                    <td>{{ pedido.postre.adicional }}</td>
+                    <td>{{ pedido.cafe_te.nombre }}</td>
+                    <td>{{ pedido.cafe_te.adicional }}</td>
+                    <td>{{ pedido.total }}</td>
+                    <td>{{ pedido.entregado }}</td>
+                </tbody>
+            </table>
+            {% endfor %}
+            
+    {% else %}
+    <h3>No se encontró el pedido.</h3>
+    {% endif %}
+    
+</div>
+
+{% endblock %}
